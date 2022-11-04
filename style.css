@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+nav{
+    padding: 70px 5px 50px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav_menu{
+    display: flex;
+    gap: 25px;
+}
+
+nav .nav_menu a{
+    font-size: 0.9em;
+    color: hsl(236, 13%, 42%);
+    transition: color 0.5s;
+}
+
+nav .nav_menu li a:hover{
+    color: hsl(5, 85%, 63%);
+    text-decoration: none;
+}
+
+#nav-open, #nav-close{
+    display: none;
+}
+
+/* End of navigation */
+
+/* Main content starts */
+
+.main_heading h1{
+    font-weight: 800;
+    font-size: 3em;
+    text-transform: capitalize;
+    color: hsl(240, 100%, 5%);
+}
+
+.content p{
+    color: hsl(236, 13%, 42%);
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.btn{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8em;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    border-radius: 0;
+    padding: 7px 15px;
+}
+
+.btn:hover{
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+}
+
+/* Aside */
+
+.aside{
+    background-color: hsl(240, 100%, 5%);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.aside h2{
+    color: hsl(35, 77%, 62%);
+    font-weight: 700;
+}
+
+.aside h3 a{
+    color: hsl(36, 100%, 99%);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.aside h3 a:hover{
+    color: hsl(35, 77%, 62%);
+    text-decoration: none;
+}
+
+.aside p{
+    color: hsl(233, 8%, 79%);
+    font-size: 0.9em;
+    padding-bottom: 20px;
+}
+
+hr{
+    background-color: hsl(233, 8%, 79%);
+}
+
+/* article */
+
+.article-card{
+    align-items: center;
+}
+
+.article-text{
+    padding-left: 15px;
+}
+
+.article-text span{
+    color: hsl(233, 8%, 79%);
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.article-text h3{
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.article-text h3 a{
+    color: hsl(240, 100%, 5%);
+}
+
+.article-text h3 a:hover{
+    color: hsl(5, 85%, 63%);
+    text-decoration: none;
+}
+
+.article-card p{
+    color: hsl(236, 13%, 42%);
+    font-size: 0.9em;
+}
+
+/* media queries */
+
+
+
+
+@media screen and (max-width: 990px){
+    .articles{
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main_content{
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    #nav-open, #nav-close{
+        display: inline-block;
+        width: 35px;
+        position: absolute;
+        top: 80px;
+        right: 30px;
+        cursor: pointer;
+    }
+
+    .nav_menu{
+        position: fixed;
+        left: 100%;
+        top: 0;
+        display: none;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        padding-top: 150px;
+        padding-left: 30px;
+        z-index: 100;
+        font-size: 1.3rem;
+        background-color: hsl(36, 100%, 99%);
+        transition: left 0.5s;
+    }
+
+    .nav_menu a{
+        color: hsl(240, 100%, 5%);
+        font-weight: 500;
+    }
+}
