@@ -27,7 +27,7 @@ nav .nav_menu a{
     transition: color 0.5s;
 }
 
-nav .nav_menu li a:hover{
+nav .nav_menu a:hover{
     color: hsl(5, 85%, 63%);
     text-decoration: none;
 }
